@@ -8,7 +8,7 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
-  margin:0; background:linear-gradient(180deg,var(--bg),#071028 70%); color:#e6eef8;
+  margin:0; background:linear-gradient(180deg,var(--bg) 0%, #0a0f1c 50%, #071028 100%); color:#e6eef8;
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
   line-height:1.45;
 }
@@ -35,8 +35,8 @@ body{
 .hero-preview .device{width:100%;max-width:320px;height:190px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(3,5,15,0.6);border:1px solid rgba(255,255,255,0.03)}
 .projects{padding:30px 28px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
-.card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 26px rgba(2,6,18,0.6);display:flex;flex-direction:column}
-.card-media{height:140px;display:flex;align-items:center;justify-content:center}
+.card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 26px rgba(2,6,18,0.6);display:flex;flex-direction:column;gap:10px;}
+.card-media{height:140px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .card-body{padding:14px}
 .card h4{margin:0 0 8px}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
