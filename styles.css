@@ -59,4 +59,45 @@ body{
   .nav{display:none}
   .header-inner{padding:8px 0}
   .form .row{grid-template-columns:1fr}
+header {
+  background: rgba(8, 10, 20, 0.92);
+}
+
+/* Аватар */
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.05);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Фикс наложения карточек */
+.card-media {
+  position: relative;
+  z-index: 1;
+  padding: 12px;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+  padding: 14px;
+}
+
+/* Чтобы SVG/контент не вылезал */
+.card-media svg,
+.card-media img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 }
