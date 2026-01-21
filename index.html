@@ -1,27 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Александр — портфолио</title>
-  <meta name="description" content="Портфолио: разработка сайтов на HTML/CSS/JS, Unity, Python, C#, 3D" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css">
+  <title>Портфолио — Александр</title>
+  <meta name="description" content="Портфолио: разработка сайтов на HTML/CSS/JS, Unity, Python, C#, 3D — MagicVoxel, 3ds Max."/>
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <div class="avatar">
-          <!-- Положи файл assets/alex.jpg -->
-          <img src="assets/alex.jpg" alt="Александр" class="avatar-img">
-        </div>
+        <div class="avatar" aria-hidden="true"></div>
         <div>
           <h1>Александр</h1>
           <p class="muted">Создаю сайты на HTML · CSS · JavaScript · Unity · 3D</p>
         </div>
       </div>
-
       <nav class="nav">
         <a href="#projects">Проекты</a>
         <a href="#skills">Навыки</a>
@@ -35,51 +31,60 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <h2>Чистый, адаптивный сайт, который реально работает</h2>
-          <p class="lead">Лендинги, SPA, прототипы и интеграции — аккуратный код и быстрая отдача.</p>
-
+          <h2>Чистый, адаптивный сайт, который действительно работает</h2>
+          <p class="lead">Лендинги, SPA, прототипы и интеграции — аккуратный код, быстрая отдача, поддержка после сдачи.</p>
           <div class="hero-actions">
             <a href="#contact" class="button primary">Заказать сайт</a>
-            <a href="#projects" class="button">Проекты</a>
+            <a href="#projects" class="button">Посмотреть проекты</a>
           </div>
-
           <ul class="meta-list">
             <li>HTML · CSS · JS</li>
             <li>Адаптивность</li>
-            <li>Интеграция с Unity / 3D</li>
+            <li>Оптимизация под игры (Unity)</li>
           </ul>
         </div>
-
-        <div class="hero-photo" aria-hidden="true">
-          <img src="assets/alex.jpg" alt="Превью">
+        <div class="hero-preview" aria-hidden="true">
+          <div class="device">
+            <svg viewBox="0 0 120 80" class="code-art">
+              <rect x="2" y="6" width="116" height="68" rx="4" fill="url(#g)"/>
+              <defs>
+                <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#2b2f48"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+              </defs>
+              <g fill="none" stroke="#9aa4ff" stroke-width="0.8">
+                <rect x="10" y="14" width="100" height="6" rx="1.2"/>
+                <rect x="10" y="24" width="80" height="6" rx="1.2"/>
+                <rect x="10" y="34" width="60" height="6" rx="1.2"/>
+                <rect x="10" y="44" width="90" height="6" rx="1.2"/>
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="projects" class="container projects">
       <h3>Проекты</h3>
-      <p class="muted">Демонстрационные работы — можно адаптировать под заказ.</p>
-
+      <p class="muted">Несколько демонстрационных работ — готово под интеграцию и правки.</p>
       <div class="cards">
         <article class="card">
           <div class="card-media" aria-hidden="true">
-            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#e6e9ff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#556" font-size="12">Лендинг</text></svg>
+            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#e6e9ff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#556" font-size="12">Лендинг — продукт</text></svg>
           </div>
           <div class="card-body">
-            <h4>Лендинг — продукт</h4>
-            <p>Чистая вёрстка, адаптив, форма заявки, микро-взаимодействия.</p>
+            <h4>Лендинг продуктовой страницы</h4>
+            <p>Чистая вёрстка, адаптив, форма заявки, micro-interactions.</p>
             <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-            <div class="card-actions"><a class="button small" href="#contact">Заказать</a></div>
+            <div class="card-actions"><a class="button small" href="#contact">Заказать похожее</a></div>
           </div>
         </article>
 
         <article class="card">
           <div class="card-media" aria-hidden="true">
-            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#ffeede"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#664" font-size="12">SPA</text></svg>
+            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#ffeede"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#664" font-size="12">SPA — таск-трекер</text></svg>
           </div>
           <div class="card-body">
             <h4>SPA — таск-трекер</h4>
-            <p>REST API, авторизация, архитектура компонентов.</p>
+            <p>REST API, авторизация, чистая архитектура компонентов.</p>
             <div class="tags"><span>JS</span><span>Python</span><span>API</span></div>
             <div class="card-actions"><a class="button small" href="#contact">Заказать</a></div>
           </div>
@@ -87,11 +92,11 @@
 
         <article class="card">
           <div class="card-media" aria-hidden="true">
-            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#e8ffe8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#446" font-size="12">3D</text></svg>
+            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#e8ffe8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#446" font-size="12">3D — ассеты</text></svg>
           </div>
           <div class="card-body">
-            <h4>Воксель / 3D ассеты</h4>
-            <p>MagicVoxel, 3ds Max, экспорт под Unity/FBX/OBJ, LOD, оптимизация.</p>
+            <h4>Воксель/3D ассеты</h4>
+            <p>MagicVoxel, 3ds Max, экспорт под Unity/FBX/OBJ, LOD и оптимизация.</p>
             <div class="tags"><span>Vox</span><span>3ds Max</span><span>Unity</span></div>
             <div class="card-actions"><a class="button small" href="#contact">Заказать ассеты</a></div>
           </div>
@@ -105,26 +110,28 @@
         <li>HTML / CSS / JavaScript</li>
         <li>Unity, C# (игры и прототипы)</li>
         <li>Python: backend, автоматизация</li>
-        <li>C#: desktop-инструменты</li>
+        <li>C#: desktop инструменты</li>
         <li>MagicVoxel, 3ds Max</li>
-        <li>Git, сборки, базовая оптимизация</li>
+        <li>Git, сборки, простая оптимизация</li>
       </ul>
     </section>
 
     <section id="about" class="container about">
       <h3>Про меня</h3>
-      <p>Создаю рабочие решения: от лендинга до прототипа игры в Unity. Предпочитаю понятный код и прозрачное общение.</p>
-      <ul class="facts">
-        <li>Быстрая отдача MVP</li>
-        <li>Поддержка после сдачи</li>
-        <li>Готов к оплате по вехам</li>
-      </ul>
+      <p>Я создаю рабочие решения: от лендинга до прототипа игры в Unity. Предпочитаю понятный код и прозрачное общение: объясняю, что и зачем делаю, и оставляю документацию по внедрению.</p>
+      <div class="split">
+        <ul class="facts">
+          <li>Быстрая отдача MVP</li>
+          <li>Поддержка после сдачи</li>
+          <li>Готов к частичной оплате по вехам</li>
+        </ul>
+        <div class="quote">"Не обещаю чудес, но довожу проекты до результата"</div>
+      </div>
     </section>
 
     <section id="contact" class="container contact">
       <h3>Связаться</h3>
-      <p class="muted">Присылай ТЗ, референсы или короткое сообщение — отвечаю быстро.</p>
-
+      <p class="muted">Присылай ТЗ, референсы или короткое сообщение — быстро отвечаю.</p>
       <form id="contactForm" class="form" novalidate>
         <div class="row">
           <label>Имя
@@ -134,19 +141,17 @@
             <input type="email" name="email" id="email" required placeholder="you@example.com">
           </label>
         </div>
-
         <label>Сообщение
-          <textarea name="message" id="message" rows="5" required placeholder="Что нужно сделать? Ссылки/референсы"></textarea>
+          <textarea name="message" id="message" rows="5" required placeholder="Что нужно сделать? ссылки/референсы"></textarea>
         </label>
-
         <div class="form-actions">
           <button type="submit" class="button primary">Отправить</button>
           <button type="button" id="copyTemplate" class="button">Шаблон ТЗ</button>
         </div>
-
         <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
       </form>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -156,6 +161,6 @@
     </div>
   </footer>
 
-  <script src="./script.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>
