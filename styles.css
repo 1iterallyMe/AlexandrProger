@@ -61,11 +61,9 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  box-shadow: 0 6px 18px rgba(7, 9, 22, 0.6);
-  border: 2px solid rgba(255, 255, 255, 0.04);
   overflow: hidden;
   flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.05);
 }
 
 .avatar-img {
