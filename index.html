@@ -1,256 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Портфолио — Александр</title>
-  <meta name="description" content="Портфолио: разработка сайтов на HTML/CSS/JS, Unity, Python, C#, 3D — MagicVoxel, 3ds Max."/>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Александр — разработчик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <!-- Аватар: положи файл assets/alex.jpg -->
-        <div class="avatar">
-          <img src="assets/alex.jpg" alt="Александр" class="avatar-img">
-        </div>
-        <div>
-          <h1>Александр</h1>
-          <p class="muted">Создаю сайты на HTML · CSS · JavaScript · Unity · 3D</p>
-        </div>
-      </div>
 
-      <nav class="nav">
-        <a href="#projects">Проекты</a>
-        <a href="#skills">Навыки</a>
-        <a href="#about">Про меня</a>
-        <a href="#contact" class="cta">Заказать</a>
-      </nav>
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="avatar">
+        <img src="assets/alex.jpg" alt="Александр" class="avatar-img">
+      </div>
+      <div>
+        <h1>Александр</h1>
+        <p>HTML · CSS · JavaScript · Unity · 3D</p>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h2>Чистый, адаптивный сайт, который действительно работает</h2>
-          <p class="lead">Лендинги, SPA, прототипы и интеграции — аккуратный код, быстрая отдача, поддержка после сдачи.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="button primary">Заказать сайт</a>
-            <a href="#projects" class="button">Посмотреть проекты</a>
-          </div>
-          <ul class="meta-list">
-            <li>HTML · CSS · JS</li>
-            <li>Адаптивность</li>
-            <li>Оптимизация под Unity</li>
-          </ul>
-        </div>
+    <nav class="nav">
+      <a href="#projects">Проекты</a>
+      <a href="#skills">Навыки</a>
+      <a href="#contact" class="cta">Заказать</a>
+    </nav>
+  </div>
+</header>
 
-        <div class="hero-preview" aria-hidden="true">
-          <div class="device">
-            <!-- Превью-арт: просто SVG, ничего нагруженного -->
-            <svg viewBox="0 0 120 80" class="code-art" aria-hidden="true" role="img">
-              <rect x="2" y="6" width="116" height="68" rx="4" fill="#111827"/>
-              <g fill="none" stroke="#9aa4ff" stroke-width="0.8">
-                <rect x="10" y="14" width="100" height="6" rx="1.2"/>
-                <rect x="10" y="24" width="80" height="6" rx="1.2"/>
-                <rect x="10" y="34" width="60" height="6" rx="1.2"/>
-                <rect x="10" y="44" width="90" height="6" rx="1.2"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h2>Чистый, адаптивный сайт,<br>который реально работает</h2>
+      <p class="lead">
+        Лендинги, SPA, интеграции — аккуратный код, нормальная структура и поддержка после сдачи.
+      </p>
 
-    <section id="projects" class="container projects">
-      <h3>Проекты</h3>
-      <p class="muted">Демонстрационные работы — можно адаптировать под заказ.</p>
-      <div class="cards">
-        <article class="card">
-          <div class="card-media" aria-hidden="true">
-            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#e6e9ff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#556" font-size="12">Лендинг — продукт</text></svg>
-          </div>
-          <div class="card-body">
-            <h4>Лендинг — продукт</h4>
-            <p>Чистая вёрстка, адаптив, форма заявки, микро-взаимодействия.</p>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-            <div class="card-actions"><a class="button small" href="#contact">Заказать похожее</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media" aria-hidden="true">
-            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#ffeede"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#664" font-size="12">SPA — таск-трекер</text></svg>
-          </div>
-          <div class="card-body">
-            <h4>SPA — таск-трекер</h4>
-            <p>REST API, авторизация, чистая архитектура компонентов.</p>
-            <div class="tags"><span>JS</span><span>Python</span><span>API</span></div>
-            <div class="card-actions"><a class="button small" href="#contact">Заказать</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media" aria-hidden="true">
-            <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#e8ffe8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#446" font-size="12">3D — ассеты</text></svg>
-          </div>
-          <div class="card-body">
-            <h4>Воксель/3D ассеты</h4>
-            <p>MagicVoxel, 3ds Max, экспорт под Unity/FBX/OBJ, LOD и оптимизация.</p>
-            <div class="tags"><span>Vox</span><span>3ds Max</span><span>Unity</span></div>
-            <div class="card-actions"><a class="button small" href="#contact">Заказать ассеты</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="container skills">
-      <h3>Навыки</h3>
-      <ul class="skills-grid">
-        <li>HTML / CSS / JavaScript</li>
-        <li>Unity, C# (игры и прототипы)</li>
-        <li>Python: backend, автоматизация</li>
-        <li>C#: desktop инструменты</li>
-        <li>MagicVoxel, 3ds Max</li>
-        <li>Git, сборки, базовая оптимизация</li>
+      <ul class="features">
+        <li>HTML · CSS · JavaScript</li>
+        <li>Адаптивность под все экраны</li>
+        <li>Unity / 3D интеграции</li>
       </ul>
-    </section>
 
-    <section id="about" class="container about">
-      <h3>Про меня</h3>
-      <p>Создаю рабочие решения: от лендинга до прототипа игры в Unity. Предпочитаю понятный код и прозрачное общение. Документирую и передаю инструкции по внедрению.</p>
-      <div class="split">
-        <ul class="facts">
-          <li>Быстрая отдача MVP</li>
-          <li>Поддержка после сдачи</li>
-          <li>Готов к оплате по вехам</li>
-        </ul>
-        <div class="quote">"Не обещаю чудес, но довожу проекты до результата"</div>
+      <div class="actions">
+        <a href="#contact" class="btn primary">Заказать сайт</a>
+        <a href="#projects" class="btn">Проекты</a>
       </div>
-    </section>
-
-    <section id="contact" class="container contact">
-      <h3>Связаться</h3>
-      <p class="muted">Присылай ТЗ, референсы или короткое сообщение — отвечаю быстро.</p>
-
-      <form id="contactForm" class="form" novalidate>
-        <div class="row">
-          <label>Имя
-            <input type="text" name="name" id="name" required placeholder="Ваше имя">
-          </label>
-          <label>Почта
-            <input type="email" name="email" id="email" required placeholder="you@example.com">
-          </label>
-        </div>
-
-        <label>Сообщение
-          <textarea name="message" id="message" rows="5" required placeholder="Что нужно сделать? ссылки/референсы"></textarea>
-        </label>
-
-        <div class="form-actions">
-          <button type="submit" class="button primary">Отправить</button>
-          <button type="button" id="copyTemplate" class="button">Шаблон ТЗ</button>
-        </div>
-
-        <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© Александр — Разработка сайтов и 3D-ассетов</p>
-      <p class="muted">Сделано аккуратно. Готов обсудить ваш проект.</p>
     </div>
-  </footer>
 
-  <script>
-    // Полный рабочий скрипт (mailto-версия). Вставлен здесь, чтобы не терять файл.
-    const EMAIL = "supesupeowo@gmail.com";
+    <div class="hero-photo">
+      <img src="assets/alex.jpg" alt="Александр">
+    </div>
+  </div>
+</section>
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("contactForm");
-      const msg = document.getElementById("formMsg");
-      const copyBtn = document.getElementById("copyTemplate");
+<section id="contact" class="contact">
+  <div class="container">
+    <h3>Контакты</h3>
+    <p>Почта: <a href="mailto:supesupeowo@gmail.com">supesupeowo@gmail.com</a></p>
+  </div>
+</section>
 
-      const isValidEmail = (e) => /\S+@\S+\.\S+/.test(e);
-
-      const showMsg = (text, timeout = 4000) => {
-        if (!msg) return;
-        msg.textContent = text;
-        if (timeout > 0) {
-          clearTimeout(showMsg._t);
-          showMsg._t = setTimeout(() => { msg.textContent = ""; }, timeout);
-        }
-      };
-
-      if (form) {
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-
-          const name = (form.name?.value || "").trim();
-          const email = (form.email?.value || "").trim();
-          const message = (form.message?.value || "").trim();
-
-          if (!name || !email || !message) {
-            showMsg("Пожалуйста, заполните все поля.");
-            return;
-          }
-
-          if (!isValidEmail(email)) {
-            showMsg("Проверьте правильность email.");
-            return;
-          }
-
-          const subject = `Заказ сайта — ${name}`;
-          const bodyLines = [
-            `Имя: ${name}`,
-            `Почта: ${email}`,
-            "",
-            "Сообщение:",
-            message
-          ];
-          const body = bodyLines.join("\n");
-
-          // Открывает почтовый клиент пользователя
-          const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-          window.location.href = mailto;
-
-          showMsg("Открывается почтовый клиент...");
-        });
-      }
-
-      if (copyBtn) {
-        copyBtn.addEventListener("click", async () => {
-          const tpl = [
-            "Коротко о проекте: (цель, целевая аудитория)",
-            "Страницы: (например, Главная, О продукте, Контакты)",
-            "Примеры/референсы (ссылки):",
-            "Контент: (тексты, изображения — если нет, укажите это)",
-            "Функции: (форма, авторизация, каталог, оплата и т.д.)",
-            "Сроки и бюджет:"
-          ].join("\n");
-
-          try {
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              await navigator.clipboard.writeText(tpl);
-            } else {
-              const ta = document.createElement("textarea");
-              ta.value = tpl;
-              document.body.appendChild(ta);
-              ta.select();
-              document.execCommand("copy");
-              ta.remove();
-            }
-            showMsg("Шаблон ТЗ скопирован в буфер обмена.", 2500);
-          } catch {
-            showMsg("Не удалось скопировать шаблон. Скопируй вручную.", 3000);
-          }
-        });
-      }
-    });
-  </script>
 </body>
 </html>
