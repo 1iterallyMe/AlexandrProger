@@ -1,4 +1,8 @@
-/* styles.css
+/* styles.css — читаемый, аккуратный стиль для портфолио */
+
+/* =========================
+   Переменные и базовые установки
+   ========================= */
 :root {
   --bg: #0f1724;
   --card: #0b1220;
@@ -11,15 +15,13 @@
   color-scheme: dark;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html,
-body {
-  height: 100%;
-}
+html, body { height: 100%; }
 
+/* =========================
+   Фон и типографика
+   ========================= */
 body {
   margin: 0;
   background: linear-gradient(180deg, var(--bg), #071028 70%);
@@ -29,18 +31,22 @@ body {
   line-height: 1.45;
 }
 
+/* Общий контейнер */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 28px;
 }
 
+/* =========================
+   Хедер / навигация
+   ========================= */
 .site-header {
   backdrop-filter: blur(6px);
   position: sticky;
   top: 0;
   z-index: 30;
-  background: linear-gradient(180deg, rgba(8, 10, 20, 0.6), rgba(8, 10, 20, 0.35));
+  background: rgba(8, 10, 20, 0.92); /* плотный фон — убирает "полоску" */
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
@@ -48,7 +54,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0; 
+  padding: 12px 0;
 }
 
 .brand {
@@ -57,6 +63,7 @@ body {
   align-items: center;
 }
 
+/* Аватар — фиксированный размер, не раздувается */
 .avatar {
   width: 56px;
   height: 56px;
@@ -64,6 +71,7 @@ body {
   overflow: hidden;
   flex-shrink: 0;
   border: 2px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
 }
 
 .avatar-img {
@@ -73,23 +81,11 @@ body {
   display: block;
 }
 
-.brand h1 {
-  font-size: 18px;
-  margin: 0;
-}
+.brand h1 { font-size: 18px; margin: 0; }
+.muted { color: var(--muted); margin-top: 6px; font-size: 13px; }
 
-.muted {
-  color: var(--muted);
-  margin-top: 6px;
-  font-size: 13px;
-}
-
-.nav {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
+/* Навигация */
+.nav { display: flex; gap: 14px; align-items: center; }
 .nav a {
   color: var(--muted);
   text-decoration: none;
@@ -97,16 +93,16 @@ body {
   border-radius: 8px;
   font-size: 14px;
 }
-
 .nav a.cta {
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
   color: #071028;
   font-weight: 600;
 }
 
-.hero {
-  padding: 48px 0;
-}
+/* =========================
+   Hero / главный экран
+   ========================= */
+.hero { padding: 48px 0; }
 
 .hero-grid {
   display: grid;
@@ -115,22 +111,12 @@ body {
   align-items: center;
 }
 
-.hero h2 {
-  font-size: 28px;
-  margin: 0 0 12px;
-}
+.hero h2 { font-size: 28px; margin: 0 0 12px; }
+.lead { color: var(--muted); margin-bottom: 18px; }
 
-.lead {
-  color: var(--muted);
-  margin-bottom: 18px;
-}
+.hero-actions { display: flex; gap: 12px; align-items: center; }
 
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
+/* Кнопки */
 .button {
   display: inline-block;
   padding: 10px 14px;
@@ -141,25 +127,14 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
-.button.small {
-  padding: 8px 10px;
-  font-size: 13px;
-}
-
+.button.small { padding: 8px 10px; font-size: 13px; }
 .button.primary {
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
   color: #071028;
   font-weight: 600;
 }
 
-.meta-list {
-  display: flex;
-  gap: 12px;
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 13px;
-}
+.meta-list { display: flex; gap: 12px; margin-top: 18px; color: var(--muted); font-size: 13px; }
 
 .hero-preview .device {
   width: 100%;
@@ -174,9 +149,10 @@ body {
   border: 1px solid rgba(255,255,255,0.03);
 }
 
-.projects {
-  padding: 30px 28px;
-}
+/* =========================
+   Проекты / карточки
+   ========================= */
+.projects { padding: 30px 28px; }
 
 .cards {
   display: grid;
@@ -195,16 +171,18 @@ body {
   flex-direction: column;
 }
 
+/* Превью медиа */
 .card-media {
   height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;       
+  padding: 12px;        /* важно: отступ, чтобы ничего не налезало */
   position: relative;
   z-index: 1;
 }
 
+/* Тело карточки */
 .card-body {
   padding: 14px;
   position: relative;
@@ -212,9 +190,7 @@ body {
   background: transparent;
 }
 
-.card h4 {
-  margin: 0 0 8px;
-}
+.card h4 { margin: 0 0 8px; }
 
 .tags {
   display: flex;
@@ -222,7 +198,6 @@ body {
   flex-wrap: wrap;
   margin-top: 10px;
 }
-
 .tags span {
   background: var(--glass);
   padding: 6px 8px;
@@ -231,10 +206,9 @@ body {
   color: var(--muted);
 }
 
-.card-actions {
-  margin-top: 12px;
-}
+.card-actions { margin-top: 12px; }
 
+/* Защита от вылезающих SVG/картинок */
 .card-media svg,
 .card-media img {
   max-width: 100%;
@@ -242,6 +216,9 @@ body {
   display: block;
 }
 
+/* =========================
+   Навыки, про меня
+   ========================= */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -250,7 +227,6 @@ body {
   padding: 0;
   margin: 18px 0 36px;
 }
-
 .skills-grid li {
   background: var(--card);
   padding: 12px;
@@ -258,23 +234,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
-.about .split {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  margin-top: 12px;
-}
-
-.facts {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.facts li {
-  margin-bottom: 8px;
-  color: var(--muted);
-}
+.about .split { display: flex; gap: 18px; align-items: center; margin-top: 12px; }
+.facts { list-style: none; padding: 0; margin: 0; }
+.facts li { margin-bottom: 8px; color: var(--muted); }
 
 .quote {
   background: linear-gradient(90deg, rgba(107,140,255,0.08), rgba(139,230,184,0.06));
@@ -284,6 +246,9 @@ body {
   font-style: italic;
 }
 
+/* =========================
+   Контактная форма
+   ========================= */
 .contact .form {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   padding: 18px;
@@ -291,14 +256,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.form label {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 14px;
-}
-
-.form input,
-.form textarea {
+.form label { display: block; margin-bottom: 12px; font-size: 14px; }
+.form input, .form textarea {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
@@ -308,45 +267,31 @@ body {
   resize: vertical;
 }
 
-.form .row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
+.form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-.form-actions {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-top: 8px;
-}
+.form-actions { display: flex; gap: 10px; align-items: center; margin-top: 8px; }
+.form-msg { margin-top: 10px; color: var(--accent2); }
 
-.form-msg {
-  margin-top: 10px;
-  color: var(--accent2);
-}
-
+/* =========================
+   Подвал
+   ========================= */
 .site-footer {
   padding: 24px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   margin-top: 36px;
 }
 
+/* =========================
+   Адаптив
+   ========================= */
 @media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .header-inner {
-    padding: 8px 0;
-  }
-
-  .form .row {
-    grid-template-columns: 1fr;
-  }
+  .hero-grid { grid-template-columns: 1fr; text-align: left; }
+  .nav { display: none; }
+  .header-inner { padding: 8px 0; }
+  .form .row { grid-template-columns: 1fr; }
 }
+
+/* =========================
+   Совет: если в шапке видна "полоса", замените градиент на:
+   .site-header { background: rgba(8,10,20,0.92); }
+   ========================= */
