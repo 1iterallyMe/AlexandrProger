@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Портфолио — Александр</title>
   <meta name="description" content="Портфолио: разработка сайтов на HTML/CSS/JS, Unity, Python, C#, 3D — MagicVoxel, 3ds Max."/>
-  <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-       <div class="avatar">
+        <!-- Аватар: положи файл assets/alex.jpg -->
+        <div class="avatar">
           <img src="assets/alex.jpg" alt="Александр" class="avatar-img">
-       </div>
-
+        </div>
+        <div>
           <h1>Александр</h1>
           <p class="muted">Создаю сайты на HTML · CSS · JavaScript · Unity · 3D</p>
         </div>
       </div>
+
       <nav class="nav">
         <a href="#projects">Проекты</a>
         <a href="#skills">Навыки</a>
@@ -42,16 +43,15 @@
           <ul class="meta-list">
             <li>HTML · CSS · JS</li>
             <li>Адаптивность</li>
-            <li>Оптимизация под игры (Unity)</li>
+            <li>Оптимизация под Unity</li>
           </ul>
         </div>
+
         <div class="hero-preview" aria-hidden="true">
           <div class="device">
-            <svg viewBox="0 0 120 80" class="code-art">
-              <rect x="2" y="6" width="116" height="68" rx="4" fill="url(#g)"/>
-              <defs>
-                <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#2b2f48"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
-              </defs>
+            <!-- Превью-арт: просто SVG, ничего нагруженного -->
+            <svg viewBox="0 0 120 80" class="code-art" aria-hidden="true" role="img">
+              <rect x="2" y="6" width="116" height="68" rx="4" fill="#111827"/>
               <g fill="none" stroke="#9aa4ff" stroke-width="0.8">
                 <rect x="10" y="14" width="100" height="6" rx="1.2"/>
                 <rect x="10" y="24" width="80" height="6" rx="1.2"/>
@@ -66,15 +66,15 @@
 
     <section id="projects" class="container projects">
       <h3>Проекты</h3>
-      <p class="muted">Несколько демонстрационных работ — готово под интеграцию и правки.</p>
+      <p class="muted">Демонстрационные работы — можно адаптировать под заказ.</p>
       <div class="cards">
         <article class="card">
           <div class="card-media" aria-hidden="true">
             <svg viewBox="0 0 200 120"><rect width="200" height="120" rx="8" fill="#e6e9ff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#556" font-size="12">Лендинг — продукт</text></svg>
           </div>
           <div class="card-body">
-            <h4>Лендинг продуктовой страницы</h4>
-            <p>Чистая вёрстка, адаптив, форма заявки, micro-interactions.</p>
+            <h4>Лендинг — продукт</h4>
+            <p>Чистая вёрстка, адаптив, форма заявки, микро-взаимодействия.</p>
             <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
             <div class="card-actions"><a class="button small" href="#contact">Заказать похожее</a></div>
           </div>
@@ -114,18 +114,18 @@
         <li>Python: backend, автоматизация</li>
         <li>C#: desktop инструменты</li>
         <li>MagicVoxel, 3ds Max</li>
-        <li>Git, сборки, простая оптимизация</li>
+        <li>Git, сборки, базовая оптимизация</li>
       </ul>
     </section>
 
     <section id="about" class="container about">
       <h3>Про меня</h3>
-      <p>Я создаю рабочие решения: от лендинга до прототипа игры в Unity. Предпочитаю понятный код и прозрачное общение: объясняю, что и зачем делаю, и оставляю документацию по внедрению.</p>
+      <p>Создаю рабочие решения: от лендинга до прототипа игры в Unity. Предпочитаю понятный код и прозрачное общение. Документирую и передаю инструкции по внедрению.</p>
       <div class="split">
         <ul class="facts">
           <li>Быстрая отдача MVP</li>
           <li>Поддержка после сдачи</li>
-          <li>Готов к частичной оплате по вехам</li>
+          <li>Готов к оплате по вехам</li>
         </ul>
         <div class="quote">"Не обещаю чудес, но довожу проекты до результата"</div>
       </div>
@@ -133,7 +133,8 @@
 
     <section id="contact" class="container contact">
       <h3>Связаться</h3>
-      <p class="muted">Присылай ТЗ, референсы или короткое сообщение — быстро отвечаю.</p>
+      <p class="muted">Присылай ТЗ, референсы или короткое сообщение — отвечаю быстро.</p>
+
       <form id="contactForm" class="form" novalidate>
         <div class="row">
           <label>Имя
@@ -143,17 +144,19 @@
             <input type="email" name="email" id="email" required placeholder="you@example.com">
           </label>
         </div>
+
         <label>Сообщение
           <textarea name="message" id="message" rows="5" required placeholder="Что нужно сделать? ссылки/референсы"></textarea>
         </label>
+
         <div class="form-actions">
           <button type="submit" class="button primary">Отправить</button>
           <button type="button" id="copyTemplate" class="button">Шаблон ТЗ</button>
         </div>
+
         <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
       </form>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -163,6 +166,91 @@
     </div>
   </footer>
 
-<script src="script.js"></script>
+  <script>
+    // Полный рабочий скрипт (mailto-версия). Вставлен здесь, чтобы не терять файл.
+    const EMAIL = "supesupeowo@gmail.com";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contactForm");
+      const msg = document.getElementById("formMsg");
+      const copyBtn = document.getElementById("copyTemplate");
+
+      const isValidEmail = (e) => /\S+@\S+\.\S+/.test(e);
+
+      const showMsg = (text, timeout = 4000) => {
+        if (!msg) return;
+        msg.textContent = text;
+        if (timeout > 0) {
+          clearTimeout(showMsg._t);
+          showMsg._t = setTimeout(() => { msg.textContent = ""; }, timeout);
+        }
+      };
+
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const name = (form.name?.value || "").trim();
+          const email = (form.email?.value || "").trim();
+          const message = (form.message?.value || "").trim();
+
+          if (!name || !email || !message) {
+            showMsg("Пожалуйста, заполните все поля.");
+            return;
+          }
+
+          if (!isValidEmail(email)) {
+            showMsg("Проверьте правильность email.");
+            return;
+          }
+
+          const subject = `Заказ сайта — ${name}`;
+          const bodyLines = [
+            `Имя: ${name}`,
+            `Почта: ${email}`,
+            "",
+            "Сообщение:",
+            message
+          ];
+          const body = bodyLines.join("\n");
+
+          // Открывает почтовый клиент пользователя
+          const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          window.location.href = mailto;
+
+          showMsg("Открывается почтовый клиент...");
+        });
+      }
+
+      if (copyBtn) {
+        copyBtn.addEventListener("click", async () => {
+          const tpl = [
+            "Коротко о проекте: (цель, целевая аудитория)",
+            "Страницы: (например, Главная, О продукте, Контакты)",
+            "Примеры/референсы (ссылки):",
+            "Контент: (тексты, изображения — если нет, укажите это)",
+            "Функции: (форма, авторизация, каталог, оплата и т.д.)",
+            "Сроки и бюджет:"
+          ].join("\n");
+
+          try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              await navigator.clipboard.writeText(tpl);
+            } else {
+              const ta = document.createElement("textarea");
+              ta.value = tpl;
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand("copy");
+              ta.remove();
+            }
+            showMsg("Шаблон ТЗ скопирован в буфер обмена.", 2500);
+          } catch {
+            showMsg("Не удалось скопировать шаблон. Скопируй вручную.", 3000);
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
