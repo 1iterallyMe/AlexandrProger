@@ -8,7 +8,7 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
-  margin:0; background:linear-gradient(180deg,var(--bg) 0%, #0a0f1c 50%, #071028 100%); color:#e6eef8;
+  margin:0; background:linear-gradient(180deg,var(--bg) 0%, var(--bg) 30%, #0a0f1c 70%, #071028 100%); color:#e6eef8;
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
   line-height:1.45;
 }
